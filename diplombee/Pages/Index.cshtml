@@ -1,0 +1,22 @@
+﻿@page
+@using diplombee.Model;
+@{
+    ViewData["Title"] = "Home page";
+}
+@model IndexModel
+
+<div class="containers">
+    <div class="in_cont">
+        <h1 class="catalog_title">Магазин продуктов пчеловодства</h1>
+        <div class="photo_catalog">
+            @foreach(var i in Model.Categories)
+            {
+                <a href="Products/Products/@i.Idcategory" class="catalog_item">
+                    <span class="catalog_text">@i.CategoryName</span>
+                </a>
+            }
+            
+        </div>
+    </div>
+    
+</div>

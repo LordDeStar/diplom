@@ -1,0 +1,438 @@
+﻿body {
+    font-family: 'Lato', Verdana;
+    font-size: 100%;
+    background: #fff;
+    height: 100vh;
+    text-align: center;
+}
+
+/*.wrap {
+    margin: 0 auto;
+    width: 70%;*/ /* отступы относительно окна браузера */
+    /*background: #ebbe2f;
+}*/
+
+.header {
+  /*  padding: 1.3em 0em; *//* поля вокруг текста */
+    background: #ebbe2f;
+}
+.header_back 
+{
+    background: #ebbe2f;
+}
+
+.logo {
+    float: left; /* обтекание логотипа */
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+    .logo a {
+        display: block; /* переопределение в блочный */
+    }
+
+.nav {
+    /*float: right;*/ /* обтекание логотипа */
+    /*margin-top: 0.82em;*/
+    background: #ebbe2f;
+    padding-left: 600px;
+    padding-top: 20px;
+}
+
+.nav > ul > li 
+{
+    display: inline-block; /* переопределение в строчно-блочный */
+}
+
+.nav > ul > li.active a 
+{
+    background: #e29527;
+    color: #ffffff;
+}
+
+.nav > ul > li > a 
+{
+        display: block;
+       font-family: 'Lato', sans-serif;
+      font-size: 1.1em;
+      text-transform: uppercase;
+      padding: 0.5em 1em;
+      color: #444;
+     -webkit-transition: 0.9s; /* плавный переход */
+     -moz-transition: 0.9s;
+     -o-transition: 0.9s;
+     transition: 0.9s;
+}
+.nav > ul > li > a:hover 
+{
+      color: #fff;
+      background: #d0a5a5;
+
+}
+.containers {
+    padding-top: 30px;
+    background-image: url(/images/bee.jpg);
+    width: 1200px;
+    height: 350px;
+    margin: 0 auto;
+}
+.in_cont {
+    max-width: 1470px;
+}
+.catalog_title {
+    font-size: 36px;
+    text-align: center;
+    padding-top: 30px;
+    color: #fff;
+}
+.photo_catalog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-top: 50px;
+}
+.photo_catalog .catalog_item {
+        color: #8b6b60;
+        font-weight: 500;
+        border-radius: 0.5em;
+        padding: 0.5em 1em;
+        border: 1px solid var(--border);
+        background-color: #fff;
+        margin: 0.5em;
+        box-shadow: 0 0 0 0 transparent;
+}
+
+
+
+main{
+    height: 90vh;
+    padding-top: 20px;
+}
+
+.regButton {
+    background: #e29527;
+    color: #ffffff;
+    border: 1px solid #e29527;
+    border-radius: 3px;
+    padding: 6px 24px;
+    cursor: pointer;
+}
+
+    .regButton:hover {
+        color: #fff;
+        background: #d0a5a5;
+    }
+
+#window {
+    width: 350px;
+    height: 530px;
+    margin: 40px auto;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    z-index: 150;
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.form {
+    width: 275px;
+    margin: -15px auto 20px auto;
+    text-align: center;
+}
+
+.input {
+    width: 260px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+
+.close {
+    margin: 10px 0 0 320px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 2px;
+    background: #ccc;
+}
+
+    .close:hover {
+        background: #fff;
+    }
+
+#gray {
+    opacity: 0.8;
+    padding: 15px;
+    background-color: rgba(1,1,1,0.75);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    z-index: 100;
+    overflow: auto;
+}
+
+
+.checkbox-green {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 10px;
+    position: relative;
+    vertical-align: middle;
+    font-size: 14px;
+    user-select: none;
+}
+
+    .checkbox-green .checkbox-green-switch {
+        display: inline-block;
+        height: 35px;
+        width: 200px;
+        box-sizing: border-box;
+        position: relative;
+        border-radius: 2px;
+        background: #0d6efd;
+        transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+    }
+
+        .checkbox-green .checkbox-green-switch:before {
+            content: attr(data-label-on);
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100px;
+            padding: 0 12px;
+            position: absolute;
+            top: 0;
+            left: 100px;
+            text-transform: uppercase;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 10px;
+            font-weight: bold;
+            line-height: 33px;
+        }
+
+        .checkbox-green .checkbox-green-switch:after {
+            content: attr(data-label-off);
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100px;
+            border-radius: 1px;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            z-index: 5;
+            text-transform: uppercase;
+            text-align: center;
+            background: white;
+            line-height: 33px;
+            font-size: 10px;
+            font-weight: bold;
+            color: #777;
+            transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+        }
+
+    .checkbox-green input[type="checkbox"] {
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+        .checkbox-green input[type="checkbox"]:checked + .checkbox-green-switch {
+            background-color: #0d9efd;
+        }
+
+            .checkbox-green input[type="checkbox"]:checked + .checkbox-green-switch:before {
+                content: attr(data-label-off);
+                left: 0;
+            }
+
+            .checkbox-green input[type="checkbox"]:checked + .checkbox-green-switch:after {
+                content: attr(data-label-on);
+                color: #0d6efd;
+                transform: translate3d(98px, 0, 0);
+            }
+
+         Hover 
+        .checkbox-green input[type="checkbox"]:not(:disabled) + .checkbox-green-switch:hover {
+            cursor: pointer;
+        }
+
+            .checkbox-green input[type="checkbox"]:not(:disabled) + .checkbox-green-switch:hover:after {
+                box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+            }
+
+     Disabled 
+    .checkbox-green input[type=checkbox]:disabled + .checkbox-green-switch {
+        opacity: 0.6;
+        filter: grayscale(50%);
+    }
+
+     Focus 
+    .checkbox-green.focused .checkbox-green-switch:after {
+        box-shadow: inset 0px 0px 4px #ff5623;
+    }
+
+.card-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    row-gap: 25px;
+    column-gap: 2px;
+}
+
+.card {
+    width: 225px;
+    min-height: 350px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Размещаем элементы в колонку */
+    border-radius: 4px;
+    transition: 0.2s;
+    position: relative;
+    padding-top: 30px
+}
+
+    /* При наведении на карточку - меняем цвет тени */
+    .card:hover {
+        box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+    }
+
+.card__top {
+    flex: 0 0 220px; /* Задаем высоту 220px, запрещаем расширение и сужение по высоте */
+    position: relative;
+    overflow: hidden; /* Скрываем, что выходит за пределы */
+}
+
+/* Контейнер для картинки */
+.card__image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+    .card__image > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Встраиваем картинку в контейнер card__image */
+        transition: 0.2s;
+    }
+
+    /* При наведении - увеличиваем картинку */
+    .card__image:hover > img {
+        transform: scale(1.1);
+    }
+
+/* Размещаем скидку на товар относительно изображения */
+.card__label {
+    padding: 4px 8px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #ff6633;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+.card__bottom {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto; /* Занимаем всю оставшуюся высоту карточки */
+    padding: 10px;
+}
+
+.card__prices {
+    display: flex;
+    margin-bottom: 10px;
+    flex: 0 0 50%; /* Размещаем цены равномерно в две колонки */
+}
+
+.card__price::after {
+    content: "₽";
+    margin-left: 4px;
+    position: relative;
+}
+
+.card__price--discount {
+    font-weight: 700;
+    font-size: 19px;
+    color: #414141;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+    .card__price--discount::before {
+        content: "Со скидкой";
+        font-weight: 400;
+        font-size: 13px;
+        color: #bfbfbf;
+    }
+
+.card__price--common {
+    font-weight: 400;
+    font-size: 17px;
+    color: #606060;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+}
+
+    .card__price--common::before {
+        content: "Обычная";
+        font-weight: 400;
+        font-size: 13px;
+        color: #bfbfbf;
+    }
+
+.card__title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    color: #414141;
+}
+
+    .card__title:hover {
+        color: #ff6633;
+    }
+
+.card__add {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    font-size: 17px;
+    color: #70c05b;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #70c05b;
+    border-radius: 4px;
+    cursor: pointer; /* Меняем курсор при наведении */
+    transition: 0.2s;
+    margin-top: auto; /* Прижимаем кнопку к низу карточки */
+}
+
+    .card__add:hover {
+        border: 1px solid #ff6633;
+        background-color: #ff6633;
+        color: #fff;
+    }

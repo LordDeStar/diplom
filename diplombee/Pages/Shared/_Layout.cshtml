@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - diplombee</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/diplombee.styles.css" asp-append-version="true" />
+</head>
+<body>
+    @*<header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">diplombee</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>*@
+    <header class="header_back">
+        <div >
+            <div class="header">
+                <div class="logo">
+                    <a href=""><img src="images/logo.png" alt="" /></a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li class="active"><a href="#">Каталог</a></li>
+                        <li><a href="~/Basket/Show">Корзина</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><button onclick="show('block')" class="regButton">Регистрация</button></li>
+                        <li><button onclick="show('block')" class="regButton">Вход</button></li>
+                    </ul>
+                   
+                </div>
+                <div class="clear"></div> 
+                <div onclick="show('none')" id="gray" style="display: block;"></div>
+                <div id="window" style="display: block;">
+                    <!-- Картинка крестика -->
+                    <img class="close" src="images/close.png" alt="" onclick="show('none')">
+                    <div class="form">
+                        <div class="registerForm" style="display:none;">
+                        
+                            
+                                <input type="text" placeholder="Имя" id="NameClient" class="input">
+                                <input type="text" placeholder="Фамилия" id="SurnameClient"  class="input">
+                                <input type="text" placeholder="Отчество" id="PatronymicClient" class="input">      
+                                <input type="tel" placeholder="Мобильный телефон" id="tel" class="input">
+                               
+                        </div>
+                        <div >
+                            <input type="text" id="LoginClient" placeholder="Логин" class="input">
+                            <input id="PasswordClient" placeholder="Пароль" type="password" class="input">
+                         </div>
+
+                       
+                    </div>
+                    <div >
+                        <button id="sendLogin" >Войти</button>
+                    </div>
+
+                    <label class="checkbox-green">
+                        <input type="checkbox" id="loginOrRegister">
+                        <span class="checkbox-green-switch" data-label-on="Регистрация" data-label-off="Вход"></span>
+                    </label>
+                </div>
+            
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - diplombee - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
